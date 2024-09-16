@@ -4,15 +4,13 @@ export default function layout({ children }) {
     return (
         <div className='flex'>
             {/*sidebar */}
-            <div className>
-                sidebar
-            </div>
+            <sidebar />
             {/*main body */}
-            <div className=''>
+            <div className='w-full '>
                 {/*header */}
-                <h2>Nav Bar</h2>
+                <Navbar />
                 {/*main */}
-                <main>{children}</main>
+                <main className='p-8 bg-slate-900 text-slate-50 min-height-screen mt-16'>{children}</main>
 
             </div>
 
