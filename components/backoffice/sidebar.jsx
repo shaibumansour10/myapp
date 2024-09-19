@@ -46,34 +46,34 @@ export default function sidebar() {
                 <image src={logo} alt="mansour" className="w-36" />
             </link>
             <div className='space-y-3 flex flex-col mt-14'>
-                <link href='#' className="flex iterm center space-x-3 py-2 px-6 border-l-4 border-green-600">
+                <link href="/Dashboard"
+                    className={
+                        Pathname === "/Dashboard" ?
+                            "flex iterm center space-x-3 py-2 px-6 border-l-8 border-green-600" : "flex item-center space-x-3 py-2 px-6"}>
                     <span><layoutGrid /></span>
                     <span>Dashboard</span>
                 </link>
-                <link href='#' className="flex iterm center space-x-3 py-2 px-6 border-l-4 border-green-600">
-                    <span><layoutGrid /></span>
-                </link>
-                <link href='#' className="flex iterm center space-x-3 py-2 px-6 border-l-4 border-green-600">
-                    <span><slack /></span>
-                    <span>customers</span>
-                    <span>catalogue</span>
-                </link>
+                <button
+                    className="flex item-center space-x-3 py-2 px-6">
+                    <div className="flex item-center space-x-6 py-2 px-6">
+                        <slack />
+                        <span>catalogue</span>
+                    </div>
+                    <ch />
+                </button>
                 {sidebarLinks.map((item, i) => {
                     const Icon = item.href
                     return (
                         <link
                             key={i}
                             href={item.href}
-                            className={item.href == Pathname ? "flex iterm center space-x-3 py-2 px-6 border-l-4 border-green-600"
-                                : "flex iterm center space-x-3 py-2 px-6 "
-                            }>
-
-
+                            className={item.href == Pathname ? "flex iterm center space-x-3 py-2 px-6 border-l-8 border-green-600"
+                                : "flex item-center space-x-3 py-2 px-6"}>
                             <span><Icon /></span>
                             <span>{item.title}</span>
-                        </link
+                        </link>
 
-        )
+                    )
                 })
                     < div className="py-2 px-6">
                 <button className="bg-lime-800 rounded-md flex item-center space-x-3 px-6 py-3">
