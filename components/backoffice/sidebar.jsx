@@ -87,3 +87,8 @@ export default function sidebar() {
         </div >
     )
 }
+
+className = {
+    showSidebar?"sm:block mt-20 sm:mt-0 dark:bg-slate-800 bg-white space-y-6 w-64 h-screen text-slate-800"
+        : "mt-20 sm:mt-0 hidden sm:block dark:bg-slate-800 bg-white space-y-6 w-64 h-screen text-slate-800 dark:text-slate-100 fixed left-0 top-0 shawod-md overflow-y-scroll"
+}
