@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react"
 
 export default function page() {
     return (
         <div>
-            <h2>banners</h2>
+            {/*header */}
+            <pageHeader
+                heading="banners"
+                href="/dashboard/banner/new"
+                linkTitle="Add banner" />
+            {/*table action */}
+            {/*Export//search//bulk Delete */}
+            <TableAction />
+            <div className="py-8">
+                <h2>Table</h2>
+            </div>
+
         </div>
 
     )

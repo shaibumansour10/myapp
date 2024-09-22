@@ -6,11 +6,13 @@ export default function layout({ children }) {
             {/*sidebar */}
             <sidebar />
             {/*main body */}
-            <div className="lg:ml-64 ml-0 flex-grow bg-slate-900 min-h-screen">
+            <div className="lg:ml-64 ml-0 flex-grow 
+            bg-slate-900 min-h-screen mt-30">
                 {/*header */}
                 <Navbar />
                 {/*main */}
-                <main className='p-8 bg-slate-900 text-slate-50 min-height-screen mt-16'>{children}</main>
+                <main className='p-8 bg-slate-900 
+                text-slate-50 min-height-screen mt-16'>{children}</main>
 
             </div>
 

@@ -34,9 +34,9 @@ export default function sidebar() {
             href: "/Dashboard/setting"
         },
         {
-            title; "online store",
+            title; "online banners",
             icon: User2,
-            href: "/Dashboard/online store"
+            href: "/Dashboard/banner"
         },
     ]
     return (
