@@ -1,10 +1,21 @@
-import React from 'react'
+import React from "react"
 
-export default function page() {
+export default function Coupons() {
     return (
         <div>
-            Dashboard
+            {/* Header */}
+           <pageHeader
+           heanding="Farmers"
+           href="/dashboard/farmers/new"
+           linkTitle="Add Farmer"/>
+            {/* Table Action */}
+            <TableAction/>
+
+            {/* Export // search // bulk Delete*/}
+            <div className="py-8">
+                <h2>Table</h2>
+            </div>
         </div>
 
-    )
+    ) 
 }

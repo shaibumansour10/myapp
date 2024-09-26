@@ -4,16 +4,15 @@ export default function page() {
     return (
         <div>
             {/*header */}
-            <div className="flex justify-between border-b
-             border-slate-500 py-4  ">
-                <Heading title="catagories" />
-                <link className="item-center 
-                take style of button sign with twitter in flowbite"
-                    href="/dashboard/categories/new">
-                    <span>Add categories </span>
-                    <plus /></link>
+           <pageHeader heading="categories" href="/dashboard/categories/new"
+            LinkTitle="Add categories" />
+            {/*Table Action*/}
+            {/*export// search // burk delete */}
+            <div className="flex py-4 px-8 justify-between bg-slate-700 rounded-lg">
+                <button>export</button>
+                (/*search */)
+                <button><trash/></button>
             </div>
-            {/*Table*/}
             <h2>categories</h2>
         </div>
 
