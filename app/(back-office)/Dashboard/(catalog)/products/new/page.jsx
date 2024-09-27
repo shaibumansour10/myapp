@@ -70,7 +70,7 @@ export async function onSubmit(data) {
 "
 return (
     <div>
-        <FormHeader title="new category" />
+        <FormHeader title="new Product" />
         <form
             onSubmit={handleSubmit(onSubmit)}
             className="w-full max-w-4xl p-4 bg-white border border-gray-200
@@ -82,63 +82,75 @@ return (
                     name="title"
                     register={register}
                     error={errors}
-                    classN ame="w-full"
+                    className="w-full"
                 />
                 <TextInput
                     label="Product sku"
                     name="sku"
                     register={register}
                     error={errors}
-                    classN ame="w-full"
+                    className="w-full"
                 />
                 <TextInput
                     label="Product barcode"
                     name="barcode"
                     register={register}
                     error={errors}
-                    classN ame="w-full"
+                    className="w-full"
                 />
                 <TextInput
                     label="Product price (Before discount)"
                     name="productPrice"
                     register={register}
                     error={errors}
-                    classN ame="w-full"
+                    type="number"
+                    className="w-full"
                 />
                 <TextInput
                     label="product sales price (after Discout)"
                     name="saleprice"
                     register={register}
                     error={errors}
+                    type="number"
                     className="w-full"
                 />
                 <selectInput
-                    label="select market"
-                    name="marketIds"
+                    label="select Category"
+                    name="CategoryId"
                     register={register}
                     error={errors}
                     className="w-full"
-                    option={markets}
-                    hasMultipleSelect={false}
+                    option={Categories}
+
+                />
+                <selectInput
+                    label="select Farmer"
+                    name="FarmerId"
+                    register={register}
+                    error={errors}
+                    className="w-full"
+                    option={Farmers}
+                />
+
+                <ImageInput
+                    imageUrl={imageUrl}
+                    setImageUrl={setImageUrl}
+                    endpoint="categoryImageUploader"
+                    label="Product Image"
                 />
                 <TextareaInput
-                    label="Category description"
+                    label="Product description"
                     name="description"
                     register={register}
                     error={errors}
                     className="w-full"
                 />
-                <ImageInput
-                    imageUrl={imageUrl}
-                    setImageUrl={setImageUrl}
-                    endpoint="categoryImageUploader"
-                    label="category Image"
-                />
+                {/*tags */}
             </div>
             <submitButton
                 isLoading={loading}
-                buttonTitle="Create Category"
-                loadingButtonTitle="Create Category please wait"
+                buttonTitle="Create Product"
+                loadingButtonTitle="Create Product please wait"
             />
 
             <div className="flex items-center justify-between
